@@ -228,7 +228,7 @@ def problem_subway():
 
         E_kinetic = (m /2 * v_max * v_max)
 
-        E_regen_3 = (1 - np.exp(-a3)) / a3 * E_kinetic
+        E_regen_3 = (1 - jnp.exp(-a3)) / a3 * E_kinetic
         
         E_overall = E_kinetic - E_regen_3 + E_drag
         
