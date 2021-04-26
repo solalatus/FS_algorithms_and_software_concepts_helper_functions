@@ -243,7 +243,7 @@ def problem_subway():
         
         cost = cost_energy + cost_tax + cost_maintanance
 
-        return price
+        return cost
         
     def d_fn(x):
         # Use floats for jax
