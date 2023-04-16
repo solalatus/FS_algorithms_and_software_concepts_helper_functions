@@ -50,7 +50,8 @@ def benchmark(data_dist, sample_nbr=500, sort_functions=[], runs=3):
                         'data type': key.split('_')[0],
                         'data amount': sample_nbr,
                         'run': i, 'time [ms]': execution_time / 1000 / 1000}
-                performance_df = performance_df.append(stat, ignore_index=True)
+                stat_df = pd.DataFrame(stat, index=[0])
+                performance_df = pd.concat([performance_df, stat_df], ignore_index=True)
     
     # Plot settings
     sns.set(rc={'figure.figsize':(16,5)})
